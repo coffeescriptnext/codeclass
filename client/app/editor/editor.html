@@ -1,7 +1,7 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <tabset>
-  <tab ng-repeat="file in files" heading="{{file.name}}" active="file.active">
+  <tab ng-repeat="file in $storage.files" heading="{{file.name}}" active="file.active">
     <div ui-ace="file.opts" class="editor" ng-model="file.content"></div>
   </tab>
 </tabset>

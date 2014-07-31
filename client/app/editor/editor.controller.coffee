@@ -1,6 +1,7 @@
 'use strict'
 
-angular.module('codeclassApp').controller 'EditorCtrl', ($scope) ->
+angular.module('codeclassApp').controller 'EditorCtrl', ($scope,$localStorage) ->
+  $scope.$storage = $localStorage;
   $scope.message = 'Hello'
   $scope.content = ''
   $scope.modes = ['Scheme', 'XML', 'Javascript']
@@ -154,7 +155,11 @@ Menu
 $(document).ready(main);'
     }
   ]
-  $scope.frameContent.htmlCode = $scope.files[0].content
-  $scope.frameContent.cssCode = $scope.files[1].content
-  $scope.frameContent.jsCode = $scope.files[2].content
+
+  if not $scope.$storage.files
+    $scope.$storage.files = $scope.files
+
+  $scope.frameContent.htmlCode = $scope.$storage.files[0].content
+  $scope.frameContent.cssCode = $scope.$storage.files[1].content
+  $scope.frameContent.jsCode = $scope.$storage.files[2].content
 

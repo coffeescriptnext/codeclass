@@ -8,6 +8,7 @@ angular.module('codeclassApp', [
   'btford.socket-io',
   'ui.router'
   'ui.ace'
+  'ngStorage',
 ])
   .config (($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) ->
     $urlRouterProvider
