@@ -2,7 +2,7 @@
 
 <tabset>
   <tab ng-repeat="file in files" heading="{{file.name}}" active="file.active">
-    <div ui-ace="file.opts" class="editor"></div>
+    <div ui-ace="file.opts" class="editor" ng-model="file.content"></div>
   </tab>
 </tabset>
 
