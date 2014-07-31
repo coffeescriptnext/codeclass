@@ -1,0 +1,14 @@
+.editor{
+  height: 200px;
+}
+@scale:0.7;
+@initialWidth:1280px;
+@initialHeight:600px;
+.preview{
+  margin:30px;
+  width:@initialWidth;
+  height: @initialHeight;
+  box-shadow: 0 0 4px 2px #888;
+  border:none;
+  transform:scale(@scale,@scale) translate(-(@initialWidth * (1-@scale) / 2),-(@initialHeight * (1-@scale) / 2 ));
+}

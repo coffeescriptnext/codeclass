@@ -1,0 +1,9 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<tabset>
+  <tab ng-repeat="file in files" heading="{{file.name}}" active="file.active">
+    <div ui-ace="file.opts" class="editor"></div>
+  </tab>
+</tabset>
+
+<iframe class="preview" frame-content="frameContent"></iframe>
