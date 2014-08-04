@@ -2,10 +2,6 @@
 
 angular.module('codeclassApp').controller 'EditorCtrl', ($scope,$localStorage) ->
   $scope.$storage = $localStorage;
-  $scope.message = 'Hello'
-  $scope.content = ''
-  $scope.modes = ['Scheme', 'XML', 'Javascript']
-  $scope.mode = $scope.modes[0]
 
   $scope.frameContent = {}
 
